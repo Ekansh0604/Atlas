@@ -1,8 +1,13 @@
+import Navbar from "./components/Navbar"
+
 function App() {
   return (
-    <h1 className="text-6xl font-bold text-orange-500">
-      ATLAS
-    </h1>
+    <>
+      <Navbar />
+      <h1 className="text-6xl font-bold text-orange-500">
+        ATLAS
+      </h1>
+    </>
   )
 }
 
