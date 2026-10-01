@@ -86,10 +86,10 @@ function ExploreSection() {
         </div>
 
         {selectedInvention &&(
-            <div className="mt-20 border-t border-black/10 pt-12 transition-opacity duration-500">
+          <div className="mt-20 border-t border-black/10 pt-12">
 
-              <div className="grid gap-12 md:grid-cols-2">
-
+            <div className="grid gap-12 md:grid-cols-2">
+              <div className="flex h-96 items-center justify-center border border-black/10 bg-black/5">            
                 {/*Invention Visual*/}
 
                 {selectedInvention.type === "camera" && (
@@ -98,25 +98,26 @@ function ExploreSection() {
                     <div className="m-12 h-8 w-8 rounded-full bg-black" />
                   </div>
                 </div>
-              )}
+                )}
 
-              {selectedInvention.type === "automobile" && (
-                <div className="h-32 w-56 border border-black/20">
-                  <div className="mt-24 flex justify-between px-6">
-                    <div className="h-8 w-8 rounded-full bg-black" />
-                    <div className="h-8 w-8 rounded-full bg-black" />
+                {selectedInvention.type === "automobile" && (
+                  <div className="h-32 w-56 border border-black/20">
+                    <div className="mt-24 flex justify-between px-6">
+                      <div className="h-8 w-8 rounded-full bg-black" />
+                      <div className="h-8 w-8 rounded-full bg-black" />
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {selectedInvention.type === "spacecraft" && (
-                <div className="relative h-40 w-40 rounded-full border border-black/20">
-                  <div className="absolute left-1/2 top-1/2 h-3 w-24 -translate-x-1/2 -translate-y-1/2 bg-black" />
-                </div>
-              )}
+                {selectedInvention.type === "spacecraft" && (
+                  <div className="relative h-40 w-40 rounded-full border border-black/20">
+                    <div className="absolute left-1/2 top-1/2 h-3 w-24 -translate-x-1/2 -translate-y-1/2 bg-black" />
+                  </div>
+                )}
+              </div>
 
                 {/* {Invention Information} */}
-                <div className="flex flex-col justify center">
+                <div className="flex flex-col justify-center">
 
                   <p className="text-xs uppercase tracking-[0.3em] text-black/40">
                     {selectedInvention.category}
@@ -136,7 +137,7 @@ function ExploreSection() {
 
                   <button
                     type="button"
-                    onClick={()=>selectedInvention(null)}
+                    onClick={() => setSelectedInvention(null)}
                     className="mt-8 w-fit text-xs uppercase tracking-[0.2em] underline underline-offset-4 transition-opacity hover:opacity-50"
                   >
                     Close Details

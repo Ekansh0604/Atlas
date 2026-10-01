@@ -45,7 +45,7 @@ function HeroSection() {
 
           <div className="absolute inset-6 rounded-full border border-black/20">
 
-            <div className="absolute inset-6 rounded-full bg-black"></div>
+            <div className="absolute inset-6 rounded-full bg-black" />
 
           </div>
 
