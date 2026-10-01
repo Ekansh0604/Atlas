@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import HeroSection from "./components/HeroSection"
 import FeaturedInventions from "./components/FeaturedInventions";
+import ExploreSection from "./components/ExploreSection"
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <FeaturedInventions />
-      <h1 className="text-6xl font-bold text-orange-500">
-        ATLAS
-      </h1>
+      <ExploreSection />
     </>
   );
 }
